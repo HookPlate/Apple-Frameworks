@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		541C654D2AAC9D1E004BA1F7 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C654C2AAC9D1E004BA1F7 /* GridView.swift */; };
 		54E943392AAC987600EDF9CD /* Apple_FrameworksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E943382AAC987600EDF9CD /* Apple_FrameworksApp.swift */; };
 		54E9433D2AAC987700EDF9CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E9433C2AAC987700EDF9CD /* Assets.xcassets */; };
 		54E943402AAC987700EDF9CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E9433F2AAC987700EDF9CD /* Preview Assets.xcassets */; };
 		54E943472AAC98BA00EDF9CD /* Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E943462AAC98BA00EDF9CD /* Framework.swift */; };
 		54E943492AAC9C5900EDF9CD /* FrameworkGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E943482AAC9C5900EDF9CD /* FrameworkGridView.swift */; };
+		54EE7B7C2AACADEC00930210 /* FrameworkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE7B7B2AACADEC00930210 /* FrameworkDetailView.swift */; };
+		54EE7B7E2AACCDE300930210 /* AFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE7B7D2AACCDE300930210 /* AFButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		541C654C2AAC9D1E004BA1F7 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		54E943352AAC987600EDF9CD /* Apple-Frameworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple-Frameworks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E943382AAC987600EDF9CD /* Apple_FrameworksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple_FrameworksApp.swift; sourceTree = "<group>"; };
 		54E9433C2AAC987700EDF9CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54E9433F2AAC987700EDF9CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		54E943462AAC98BA00EDF9CD /* Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framework.swift; sourceTree = "<group>"; };
 		54E943482AAC9C5900EDF9CD /* FrameworkGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkGridView.swift; sourceTree = "<group>"; };
+		54EE7B7B2AACADEC00930210 /* FrameworkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailView.swift; sourceTree = "<group>"; };
+		54EE7B7D2AACCDE300930210 /* AFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +60,10 @@
 				54E943382AAC987600EDF9CD /* Apple_FrameworksApp.swift */,
 				54E943462AAC98BA00EDF9CD /* Framework.swift */,
 				54E943482AAC9C5900EDF9CD /* FrameworkGridView.swift */,
-				541C654C2AAC9D1E004BA1F7 /* GridView.swift */,
+				54EE7B7B2AACADEC00930210 /* FrameworkDetailView.swift */,
 				54E9433C2AAC987700EDF9CD /* Assets.xcassets */,
 				54E9433E2AAC987700EDF9CD /* Preview Content */,
+				54EE7B7D2AACCDE300930210 /* AFButton.swift */,
 			);
 			path = "Apple-Frameworks";
 			sourceTree = "<group>";
@@ -145,7 +148,8 @@
 			files = (
 				54E943492AAC9C5900EDF9CD /* FrameworkGridView.swift in Sources */,
 				54E943472AAC98BA00EDF9CD /* Framework.swift in Sources */,
-				541C654D2AAC9D1E004BA1F7 /* GridView.swift in Sources */,
+				54EE7B7C2AACADEC00930210 /* FrameworkDetailView.swift in Sources */,
+				54EE7B7E2AACCDE300930210 /* AFButton.swift in Sources */,
 				54E943392AAC987600EDF9CD /* Apple_FrameworksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
