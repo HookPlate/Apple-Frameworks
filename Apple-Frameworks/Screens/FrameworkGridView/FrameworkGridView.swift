@@ -12,21 +12,21 @@ struct FrameworkGridView: View {
     @StateObject var viewmodel = FrameworkGridViewModel()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 LazyVGrid(columns: viewmodel.columns) {
                     ForEach(MockData.frameworks) { framework in
+                        NavigationLink(value: framework) {
+                            //this is still just what the ForEach looks like
                             FrameworkTitleView(framework: framework)
-                            .onTapGesture {
-                                //this also triggers the didset
-                                viewmodel.selectedFramework = framework
-                            }
+                        }
                     }
                 }
             }
             .navigationTitle("🍎 Frameworks")
-            .sheet(isPresented: $viewmodel.isShowingDetailView ) {
-                FrameworkDetailView(framework: viewmodel.selectedFramework ?? MockData.sampleFramework, isShowingDetailView: $viewmodel.isShowingDetailView)
+            //whatever framework we tap we'll navigate to a FrameworkDetailView with that framework
+            .navigationDestination(for: Framework.self) { framework in
+                FrameworkDetailView(framework: framework)
             }
         }
     }
