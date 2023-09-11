@@ -17,8 +17,7 @@ struct FrameworkDetailView: View {
     
     var body: some View {
         VStack {
-            //this binding is now being passed down 2 layers
-            XDismissButton(isShowingDetailView: $isShowingDetailView)
+            //no need for a dismiss button with navigationlink.
             
             Spacer()
             

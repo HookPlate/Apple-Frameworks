@@ -12,19 +12,20 @@ struct FrameworkTitleView: View {
     let framework: Framework
     
     var body: some View {
-        VStack {
+        HStack {
             Image(framework.imageName)
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 90, height: 90)
+                .frame(width: 70, height: 70)
             Text(framework.name)
                 .font(.title2)
                 .fontWeight(.semibold)
                 .scaledToFit()
                 .minimumScaleFactor(0.5)
+                .padding()
         }
-        .padding()
+        //the padding was here but made our rows to vertically fat.
     }
 }
 

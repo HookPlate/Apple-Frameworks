@@ -13,22 +13,20 @@ struct FrameworkGridView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVGrid(columns: viewmodel.columns) {
-                    ForEach(MockData.frameworks) { framework in
-                            FrameworkTitleView(framework: framework)
-                            .onTapGesture {
-                                //this also triggers the didset
-                                viewmodel.selectedFramework = framework
-                            }
+            //list has a built in tap gesture so we use the navigation link in there, don't need sheet anymore either.
+            List {
+                ForEach(MockData.frameworks) { framework in
+                    NavigationLink(destination: FrameworkDetailView(framework: framework,
+                                                                    isShowingDetailView: $viewmodel.isShowingDetailView)) {
+                       //this is where you put the code for how the list item looks. Whatever is tapped on below, triggers the above.
+                        FrameworkTitleView(framework: framework)
                     }
+                    
                 }
             }
             .navigationTitle("🍎 Frameworks")
-            .sheet(isPresented: $viewmodel.isShowingDetailView ) {
-                FrameworkDetailView(framework: viewmodel.selectedFramework ?? MockData.sampleFramework, isShowingDetailView: $viewmodel.isShowingDetailView)
-            }
         }
+        .accentColor(Color(.label))
     }
 }
 
