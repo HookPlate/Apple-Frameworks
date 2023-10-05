@@ -30,16 +30,21 @@ struct FrameworkDetailView: View {
             
             Spacer()
             
-            Button {
-                viewModel.isShowingSafariView = true
-            } label: {
+            Link(destination: URL(string: viewModel.framework.urlString) ?? URL(string: "www.apple.com")!) {
                 AFButton(title: "Learn More")
-                
             }
+            
+            //the above is simpler but takes the user out of the app. In the below they don't leave your app but requires more complexity with UIViewControllerRepresentable in SafariView
+//            Button {
+//                viewModel.isShowingSafariView = true
+//            } label: {
+//                AFButton(title: "Learn More")
+//
+//            }
         }
-        .sheet(isPresented: $viewModel.isShowingSafariView) {
-            SafariView(url: URL(string: viewModel.framework.urlString)!)
-        }
+//        .sheet(isPresented: $viewModel.isShowingSafariView) {
+//            SafariView(url: URL(string: viewModel.framework.urlString) ?? URL(string: "www.apple.com"))
+//        }
     }
 }
 
