@@ -26,7 +26,9 @@ struct FrameworkGridView: View {
             }
             .navigationTitle("🍎 Frameworks")
             .sheet(isPresented: $viewmodel.isShowingDetailView ) {
-                FrameworkDetailView(framework: viewmodel.selectedFramework ?? MockData.sampleFramework, isShowingDetailView: $viewmodel.isShowingDetailView)
+                //now we create a vm and inject it into our frameworkdetailview because we're relying on data from this screen to populate the next.
+                FrameworkDetailView(viewModel: FrameworkDetailViewModel(framework: viewmodel.selectedFramework!,
+                                                                        isShowingDetailView: $viewmodel.isShowingDetailView))
             }
         }
     }
